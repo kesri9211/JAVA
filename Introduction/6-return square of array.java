@@ -4,10 +4,10 @@ public class Main
     static int[] reverse(int ans[]){
         int j=ans.length-1;
         int i=0;
-        while(i<=j){
+        while(i<j){
             int temp=ans[i];
-            ans[j]=ans[i];
-            ans[i]=temp;
+            ans[i]=ans[j];
+            ans[j]=temp;
             i++; 
             j--;
         }
@@ -21,24 +21,22 @@ public class Main
         int ans[]=new int[n];
         while(l<=r){
             if(Math.abs(ar[l])>Math.abs(ar[r])){
-                ans[i]=ar[l]*ar[l];
+                ans[i++]=ar[l]*ar[l];
                 l++;
-                i++;
             }
-            else if(Math.abs(ar[l])<Math.abs(ar[r])){
-                ans[i]=ar[r]*ar[r];
+            else{
+                ans[i++]=ar[r]*ar[r];
                 r--;
-                i++;
             }
         }
-        reverse(ans);
+       ans = reverse(ans);
         System.out.println("shorted array");
          for(int k=0;k<n;k++)
 		        System.out.print(ans[k]+" ");
     }
+	
     
-    
-	public static void main(String[] args) {
+    	public static void main(String[] args) {
 	    Scanner sc=new Scanner(System.in);
 		System.out.println("enter size of array");
 		int n=sc.nextInt();
@@ -46,7 +44,6 @@ public class Main
 		System.out.println("enter element of array");
 		for(int i=0;i<n;i++)
 		ar[i]=sc.nextInt();
-		
 		sortsquare(ar);
 		    }
 }
