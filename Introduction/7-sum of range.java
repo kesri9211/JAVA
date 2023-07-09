@@ -27,6 +27,5 @@ public class Main
 		    int b=sc.nextInt();
 		    System.out.println("result "+(ar[b]-ar[a-1]));
 		}
-
 	}
 }
