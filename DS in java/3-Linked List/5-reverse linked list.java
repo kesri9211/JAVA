@@ -45,3 +45,17 @@ public class Reverse {
 
     }
 }
+
+//reverse using two pointer
+public ListNode reverse(ListNode head){
+ ListNode prev=null;
+        ListNode curr=head;
+        ListNode agla=null;
+        while(curr!=null){
+            agla=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=agla;
+        }
+        return prev;
+}
