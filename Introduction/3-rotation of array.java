@@ -73,3 +73,33 @@ public class Main
 		
 	}
 }
+
+
+/*Block swap algo
+rotate from front 
+k=2
+	input[1,2,3,4,5]
+	output[3,4,5,1,2]*/
+public class Main
+{
+    public static void reverse(int ar[],int l,int r){
+        
+        while(l<r){
+            int t=ar[l];
+            ar[l]=ar[r];
+            ar[r]=t;
+            l++;r--;
+        }
+    }
+	public static void main(String[] args) {
+		int ar[]={1,2,3,4,5};
+		int k=2;
+		int n=ar.length;
+		reverse(ar,k,n-1);
+		reverse(ar,0,k-1);
+		reverse(ar,0,n-1);
+		for(int i=0;i<ar.length;i++)
+		    System.out.print(ar[i]+" ");
+	}
+	
+}
