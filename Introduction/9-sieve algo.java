@@ -10,9 +10,11 @@ public class Main
 	public static void main(String[] args) {
 	    int limit=40;
 		boolean prime[]=new boolean[limit+1];
-		for(int i=2;i<=limit;i++){
-		    prime[i]=true;
-		}
+		// for(int i=2;i<=limit;i++){
+		//     prime[i]=true;
+		// }   OR
+		Arrays.fill(prime, true);
+		
 		for(int p=2;p*p<=limit;p++){
 		    if(prime[p]==true){
 		        for(int i=p*p;i<=limit;i+=p){
