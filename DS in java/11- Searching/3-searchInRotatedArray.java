@@ -13,7 +13,8 @@ public class Main
 		        l=mid+1;
 		    }
 		    else {
-		        //ans=mid;
+		        //ans=ar[mid];
+		        //r=mid-1;
 		        r=mid;
 		    }
 		}
