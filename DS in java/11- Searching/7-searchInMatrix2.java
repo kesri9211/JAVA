@@ -8,7 +8,7 @@ Example 1:
 Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5
 Output: true
 */
-//approach : decrease column when target is smaller and increase row when target is greater.
+//approach: decrease column when target is smaller and increase row when target is greater.
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int n=matrix.length;
