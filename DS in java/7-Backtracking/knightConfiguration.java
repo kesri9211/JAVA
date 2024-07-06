@@ -1,3 +1,4 @@
+
 class Solution {
     public boolean helper(int[][] grid, int row, int col, int num) {
         int size = grid.length;
