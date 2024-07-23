@@ -47,7 +47,7 @@ class Solution {
 //Method 2 optimise TC: O(N^2)
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        HashSet<List<Integer>>st=new HashSet<>(); //list of hashset to store unique triplet
+        HashSet<List<Integer>>st=new HashSet<>(); //hashset of list to store unique triplet
         List<Integer> triplet=new ArrayList<>(); //store 3 sum
         for(int i=0;i<nums.length-2;i++){
             HashSet<Integer>table=new HashSet<>(); //maintain hashtable-- store third number need to find
