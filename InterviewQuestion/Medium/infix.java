@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Main {
     public static void evaluate(String s) {
         char token[] = s.toCharArray();
