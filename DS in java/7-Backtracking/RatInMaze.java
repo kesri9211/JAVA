@@ -34,6 +34,26 @@ public class RatInMaze1 {
     }
 }
 
+//using dp 
+class Solution {
+    public int path(int sr,int sc, int er,int ec,int dp[][]){
+        if(sr>er || sc>ec)return 0;
+        if(sr==er && sc==ec)return 1;
+        //if already visited
+        if(dp[sr][sc]!=0)return dp[sr][sc];
+        //recursive call
+        int down=path(sr+1,sc,er,ec,dp);
+        int right=path(sr,sc+1,er,ec,dp);
+        //store visited path
+        return dp[sr][sc]=down+right;
+
+    }
+    public int uniquePaths(int m, int n) {
+        int dp[][]=new int[m][n];
+
+        return(path(0,0,m-1,n-1,dp));
+    }
+}
 
 //--------m2-------
 /*You are standing on a point (x, y) and you want to go to origin (0, 0) by taking steps either
